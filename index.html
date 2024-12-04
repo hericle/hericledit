@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Portfólio de Edição de Vídeo</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="perfil-centralizado">
+            <img src="imagens/eu.jpg" alt="Minha Foto" class="foto-perfil">
+            <div class="info-perfil">
+                <h2>Hericle Dias Bispo</h2>
+                <p>Idade: 21 anos</p>
+                <div class="redes-sociais">
+                    <ul>
+                        <li><a href="https://www.tiktok.com/@hericledit" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a></li>
+                        <li><a href="https://www.instagram.com/hericledit" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="https://wa.me/5579996125832" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <section id="sobre">
+        <h2>Sobre Mim</h2>
+        <p>Olá! Sou editor de vídeo com anos de experiência na área. Ao longo desse tempo, desenvolvi um grande domínio sobre diversas técnicas de edição, tanto para vídeos dinâmicos e curtos quanto para projetos mais longos como gameplays e vlogs. Trabalho com ferramentas poderosas, como o CapCut, que me permite criar conteúdos de alta qualidade e totalmente personalizados para meus clientes.</p>
+        <p>Tenho um compromisso sério com os prazos e sempre me esforço para entregar os vídeos com a melhor qualidade, atendendo às expectativas do cliente. Além disso, sou apaixonado pelo que faço, buscando sempre melhorar e inovar em cada projeto.</p>
+        <p>Se você está buscando um editor confiável, que entrega trabalhos profissionais e no tempo certo, estou aqui para ajudar a transformar suas ideias em realidade!</p>
+    </section>
+    
+   <!-- Vídeos -->
+<section id="videos">
+    <h2>Meus Trabalhos</h2>
+    <div id="video-gallery" class="video-gallery">
+        <!-- Vídeos serão carregados dinamicamente aqui -->
+    </div>
+</section>
+
+<script>
+    // Lista de vídeos com links para o YouTube
+    const videos = [
+        { src: "https://www.youtube.com/embed/R1NXJ-4LvkE" },
+        { src: "https://www.youtube.com/embed/bWH0p2T-lE8" },
+    ];
+
+    // Contêiner da galeria de vídeos
+    const videoGallery = document.getElementById("video-gallery");
+
+    // Adiciona os vídeos à galeria
+    videos.forEach(video => {
+        const videoItem = document.createElement("div");
+        videoItem.classList.add("video-item");
+
+        // Cria o iframe para exibir o vídeo
+        const videoElement = document.createElement("iframe");
+        videoElement.src = video.src;
+        videoElement.width = "350"; // Largura fixa
+        videoElement.height = "623"; // Altura fixa
+        videoElement.frameborder = "0";
+        videoElement.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen";
+        videoElement.allowfullscreen = true;
+
+        videoItem.appendChild(videoElement);
+        videoGallery.appendChild(videoItem);
+    });
+</script>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

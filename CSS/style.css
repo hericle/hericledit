@@ -1,0 +1,177 @@
+/* Estilo básico */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Fundo escuro para contraste */
+    color: #fff;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Cabeçalho */
+header {
+    padding: 2rem;
+    background: linear-gradient(45deg, #8e44ad, #3498db); /* Gradiente roxo e azul */
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.perfil-centralizado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Sombras na imagem */
+    transition: transform 0.3s ease; /* Efeito de zoom na imagem */
+}
+
+.foto-perfil:hover {
+    transform: scale(1.1); /* Aumenta um pouco ao passar o mouse */
+}
+
+.info-perfil h2 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* Redes sociais */
+.redes-sociais ul {
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.redes-sociais a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.redes-sociais a:hover {
+    color: #ff6347; /* Laranja vibrante ao passar o mouse */
+}
+
+/* Seção sobre mim */
+#sobre {
+    padding: 3rem 1rem;
+    background: #fff;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#sobre h2 {
+    font-size: 2.5rem;
+    color: #8e44ad;
+    margin-bottom: 1rem;
+}
+
+#sobre p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* Vídeos */
+#videos {
+    padding: 3rem 1rem;
+    background: #121212;
+    text-align: center;
+}
+
+#videos h2 {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.video-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.video-item {
+    position: relative;
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.video-item:hover {
+    transform: scale(1.05);
+}
+
+.video-item iframe {
+    width: 350px; /* Largura para o tamanho 9:16 */
+    height: 623px; /* Altura para o tamanho 9:16 */
+    border: none;
+    border-radius: 10px;
+}
+
+/* Permite o vídeo expandir em tela cheia */
+.video-item iframe:fullscreen {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+@media (max-width: 768px) {
+    .video-item iframe {
+        width: 100%; /* Ajuste responsivo para telas menores */
+        height: auto;
+    }
+}
+
+
+
+/* Rodapé */
+footer {
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+    margin-top: 3rem;
+    font-size: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .perfil-centralizado {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .foto-perfil {
+        width: 120px;
+        height: 120px;
+    }
+
+    #sobre {
+        padding: 2rem 1rem;
+    }
+
+    .video-item iframe {
+        height: 180px; /* Ajuste para telas menores */
+    }
+}
