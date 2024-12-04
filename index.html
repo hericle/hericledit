@@ -14,14 +14,13 @@
             <img src="imagens/eu.jpg" alt="Minha Foto" class="foto-perfil">
             <div class="info-perfil">
                 <h2>Hericle Dias Bispo</h2>
-                <p>Idade: 21 anos</p>
-                <div class="redes-sociais">
-                    <ul>
-                        <li><a href="https://www.tiktok.com/@hericledit" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a></li>
-                        <li><a href="https://www.instagram.com/hericledit" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-                        <li><a href="https://wa.me/5579996125832" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
-                    </ul>
-                </div>
+                <p class="subtitulo">Eu te ajudo a tirar suas ideias do papel.</p>
+                <p class="detalhes">Atendi mais de <span class="destaque">70 clientes</span> pelo mundo.</p>
+                <ul class="redes-sociais">
+                    <li><a href="https://www.tiktok.com/@hericledit" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a></li>
+                    <li><a href="https://www.instagram.com/hericledit" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://wa.me/5579996125832" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                </ul>
             </div>
         </div>
     </header>
@@ -33,42 +32,37 @@
         <p>Se você está buscando um editor confiável, que entrega trabalhos profissionais e no tempo certo, estou aqui para ajudar a transformar suas ideias em realidade!</p>
     </section>
     
-   <!-- Vídeos -->
-<section id="videos">
-    <h2>Meus Trabalhos</h2>
-    <div id="video-gallery" class="video-gallery">
-        <!-- Vídeos serão carregados dinamicamente aqui -->
-    </div>
-</section>
+   <section id="videos">
+        <h2>Projetos Recentes</h2>
+        <div id="video-gallery" class="video-gallery">
+            <!-- Vídeos serão carregados dinamicamente aqui -->
+        </div>
+    </section>
 
-<script>
-    // Lista de vídeos com links para o YouTube
-    const videos = [
-        { src: "https://www.youtube.com/embed/R1NXJ-4LvkE" },
-        { src: "https://www.youtube.com/embed/bWH0p2T-lE8" },
-    ];
+    <script>
+        const videos = [
+            { src: "https://www.youtube.com/embed/R1NXJ-4LvkE" },
+            { src: "https://www.youtube.com/embed/bWH0p2T-lE8" },
+        ];
 
-    // Contêiner da galeria de vídeos
-    const videoGallery = document.getElementById("video-gallery");
+        const videoGallery = document.getElementById("video-gallery");
 
-    // Adiciona os vídeos à galeria
-    videos.forEach(video => {
-        const videoItem = document.createElement("div");
-        videoItem.classList.add("video-item");
+        videos.forEach(video => {
+            const videoItem = document.createElement("div");
+            videoItem.classList.add("video-item");
 
-        // Cria o iframe para exibir o vídeo
-        const videoElement = document.createElement("iframe");
-        videoElement.src = video.src;
-        videoElement.width = "350"; // Largura fixa
-        videoElement.height = "623"; // Altura fixa
-        videoElement.frameborder = "0";
-        videoElement.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen";
-        videoElement.allowfullscreen = true;
+            const videoElement = document.createElement("iframe");
+            videoElement.src = video.src;
+            videoElement.width = "350";
+            videoElement.height = "623";
+            videoElement.frameborder = "0";
+            videoElement.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen";
+            videoElement.allowfullscreen = true;
 
-        videoItem.appendChild(videoElement);
-        videoGallery.appendChild(videoItem);
-    });
-</script>
+            videoItem.appendChild(videoElement);
+            videoGallery.appendChild(videoItem);
+        });
+    </script>
     
     <script src="js/script.js"></script>
 </body>

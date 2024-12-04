@@ -3,7 +3,7 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212; /* Fundo escuro para contraste */
+    background-color: #121212;
     color: #fff;
     line-height: 1.6;
     text-align: center;
@@ -12,7 +12,7 @@ body {
 /* Cabeçalho */
 header {
     padding: 2rem;
-    background: linear-gradient(45deg, #8e44ad, #3498db); /* Gradiente roxo e azul */
+    background: linear-gradient(45deg, #8e44ad, #3498db);
     color: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -31,40 +31,66 @@ header {
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #fff;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Sombras na imagem */
-    transition: transform 0.3s ease; /* Efeito de zoom na imagem */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
 }
 
 .foto-perfil:hover {
-    transform: scale(1.1); /* Aumenta um pouco ao passar o mouse */
+    transform: scale(1.1);
+}
+
+/* Informação do perfil */
+.info-perfil {
+    text-align: left;
+    max-width: 500px;
 }
 
 .info-perfil h2 {
-    margin: 0;
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: bold;
     color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.info-perfil .subtitulo {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #ddd;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+}
+
+.info-perfil .detalhes {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.info-perfil .destaque {
+    color: #ffffff;
+    font-weight: bold;
 }
 
 /* Redes sociais */
-.redes-sociais ul {
+.redes-sociais {
     display: flex;
     gap: 1rem;
-    padding: 0;
-    margin: 0;
+}
+
+.redes-sociais li {
     list-style: none;
 }
 
 .redes-sociais a {
     text-decoration: none;
     color: #fff;
-    font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1rem;
     transition: color 0.3s ease;
 }
 
 .redes-sociais a:hover {
-    color: #ff6347; /* Laranja vibrante ao passar o mouse */
+    color: #ff6347;
 }
 
 /* Seção sobre mim */
@@ -93,7 +119,6 @@ header {
 #videos {
     padding: 3rem 1rem;
     background: #121212;
-    text-align: center;
 }
 
 #videos h2 {
@@ -112,7 +137,6 @@ header {
 }
 
 .video-item {
-    position: relative;
     background: #222;
     border-radius: 10px;
     overflow: hidden;
@@ -125,37 +149,12 @@ header {
 }
 
 .video-item iframe {
-    width: 350px; /* Largura para o tamanho 9:16 */
-    height: 623px; /* Altura para o tamanho 9:16 */
+    width: 350px;
+    height: 623px;
     border: none;
     border-radius: 10px;
 }
 
-/* Permite o vídeo expandir em tela cheia */
-.video-item iframe:fullscreen {
-    width: 100% !important;
-    height: 100% !important;
-}
-
-@media (max-width: 768px) {
-    .video-item iframe {
-        width: 100%; /* Ajuste responsivo para telas menores */
-        height: auto;
-    }
-}
-
-
-
-/* Rodapé */
-footer {
-    padding: 1rem;
-    background: #333;
-    color: #fff;
-    margin-top: 3rem;
-    font-size: 1rem;
-}
-
-/* Responsividade */
 @media (max-width: 768px) {
     .perfil-centralizado {
         flex-direction: column;
@@ -172,6 +171,7 @@ footer {
     }
 
     .video-item iframe {
-        height: 180px; /* Ajuste para telas menores */
+        width: 100%;
+        height: auto;
     }
 }
